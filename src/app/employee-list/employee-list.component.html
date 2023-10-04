@@ -1,0 +1,33 @@
+<table class="table table-bordered table-striped">
+    <thead class="thead-dark">
+        <tr>
+            <th>Transaction Reference</th>
+            <th>Bank Code</th>
+            <th>Account No</th>
+            <th>Amount</th>
+            <th>Created On</th>
+            <th>IBAN</th>
+            <th>Account Name</th>
+            <th>Status</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let emp of employee">
+            <td>{{emp.transactionPK.transactionReference}}</td>
+            <td>{{emp.transactionPK.bankCode}}</td>
+            <td>{{emp.accountNo}}</td>
+            <td>{{emp.amount}}</td>
+            <td>{{emp.createdOn | date:'medium'}}</td>
+            <td>{{emp.iban}}</td>
+            <td>{{emp.accountName}}</td>
+            <td [ngStyle]="getStatusStyle(emp.status)">
+                {{emp.status}}
+            </td>
+            <td>
+                <!-- <button (click)="verify(emp.transactionPK)" class="btn btn-success btn-sm">Verify</button> -->
+                <button (click)="deleteitem(emp.transactionPK.transactionReference, emp.transactionPK.bankCode)" class="btn btn-danger btn-sm">Delete</button>
+            </td>
+        </tr>
+    </tbody>
+</table>

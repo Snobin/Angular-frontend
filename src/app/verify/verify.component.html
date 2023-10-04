@@ -1,0 +1,26 @@
+<div class="col-md-6 offset-md-3">
+
+    <h3>Create Record</h3>
+    
+    <form (ngSubmit)="onSubmit()">
+        <div class="form-group">
+            <label>Transaction Reference</label>
+            <span class="text-danger validation-error" [class.show]="validationErrors.transactionReference">
+                {{ validationErrors.transactionreference }}
+              </span>
+                          <input type="text" class="form-control" id="transactionReference"
+            [(ngModel)]="verifydt.transactionreference" name="transactionReference">
+        </div>
+        <div class="form-group">
+            <label>Bank Code</label>
+            <span class="text-danger validation-error" [class.show]="validationErrors.bankCode">
+                {{ validationErrors.bankcode }}
+              </span>
+                          <input type="text" class="form-control" id="bankCode"
+            [(ngModel)]="verifydt.bankcode" name="bankCode">
+        </div>
+      
+        <div class="text-center mt-3">
+            <button type="submit" class="btn btn-primary custom-button">Verify</button>
+          </div>    </form>
+    </div>

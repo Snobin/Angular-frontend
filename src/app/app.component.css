@@ -1,0 +1,13 @@
+@import "~bootstrap/dist/css/bootstrap.min.css";
+
+.validation-error {
+    display: none; 
+    color: blue;   
+    font-size: 14px;
+  }
+  
+  .form-group.error .validation-error {
+    display: inline-block; 
+    margin-left: 5px;      
+  }
+  

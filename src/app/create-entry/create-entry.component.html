@@ -1,0 +1,60 @@
+<div class="col-md-6 offset-md-3 custom-form">
+  <h3>Create Record</h3>
+  
+  <form (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label>Transaction Reference</label>
+      <span class="text-danger validation-error" [class.show]="validationErrors.transactionReference">
+        {{ validationErrors.transactionReference }}
+      </span>
+      <input type="text" class="form-control" id="transactionreference" [(ngModel)]="employeePost.transactionReference" name="transactionreference">
+    </div>
+  
+    <div class="form-group">
+      <label>Bank Code</label>
+      <span class="text-danger validation-error" [class.show]="validationErrors.bankCode">
+        {{ validationErrors.bankCode }}
+      </span>
+      <input type="text" class="form-control" id="bankCode" [(ngModel)]="employeePost.bankCode" name="bankCode">
+    </div>
+    
+  
+    <div class="form-group">
+      <label>Amount</label>
+      <span class="text-danger validation-error" [class.show]="validationErrors.amount">
+        {{ validationErrors.amount }}
+      </span>
+      <input type="number" class="form-control" id="amount" [(ngModel)]="employeePost.amount" name="amount">
+    </div>
+    
+    <div class="form-group">
+      <label>Account No</label>
+      <span class="text-danger validation-error" [class.show]="validationErrors.accountNo">
+        {{ validationErrors.accountNo }}
+      </span>
+      <input type="text" class="form-control" id="accountNo" [(ngModel)]="employeePost.accountNo" name="accountNo">
+    </div>
+    <div class="form-group">
+      <label>IBAN</label>
+      <span class="text-danger validation-error" [class.show]="validationErrors.iban">
+        {{ validationErrors.iban }}
+      </span>
+      <input type="text" class="form-control" id="iban" [(ngModel)]="employeePost.iban" name="iban">
+    </div>
+    
+    <div class="form-group">
+      <label>Account Name</label>
+      <span class="text-danger validation-error" [class.show]="validationErrors.accountName">
+        {{ validationErrors.accountName }}
+      </span>
+      <input type="text" class="form-control" id="accountName" [(ngModel)]="employeePost.accountName" name="accountName">
+    </div>
+
+  
+    <div class="text-center mt-3">
+      <button type="submit" class="btn btn-primary custom-button">
+        Submit
+      </button>
+    </div>
+  </form>
+</div>
