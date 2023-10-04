@@ -1,28 +1,62 @@
-# Frontend
+Employee Management Application
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.3.
+This is a simple Angular application for managing employee records. It allows you to create new employee records, list existing records, verify data, and delete records.
 
-## Development server
+Getting Started
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+To run this application locally, follow these steps:
 
-## Code scaffolding
+1. Clone this repository to your local machine:
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+   git clone <repository-url>
 
-## Build
+2. Navigate to the project directory:
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+   cd employee-management-app
 
-## Running unit tests
+3. Install the required dependencies:
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+   npm install
 
-## Running end-to-end tests
+4. Start the development server:
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+   ng serve
 
-## Further help
+5. Open your web browser and access the application at http://localhost:4200.
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
-"# Angular-frontend" 
+Features
+
+Create Employee Records
+
+Click on the "Create Record" link in the navigation to create a new employee record.
+Fill in the required details, including Transaction Reference, Bank Code, Amount, Account No, IBAN, and Account Name.
+Click the "Submit" button to save the record.
+
+List Employee Records
+
+The "Employee List" link in the navigation displays a table of existing employee records.
+Records include Transaction Reference, Bank Code, Account No, Amount, Created On, IBAN, Account Name, and Status.
+The "Status" field is color-coded based on the status (Verified, Pending, or Rejected).
+
+Verify Data
+
+In the employee list, click the "Verify" button to verify data for a specific record.
+If the data verification is successful, the status of the record changes to "Verified."
+
+Delete Records
+
+In the employee list, click the "Delete" button to delete a specific record.
+Deleted records will be permanently removed from the system.
+
+Folder Structure
+
+src/app/components: Contains Angular components for creating, listing, and verifying employee records.
+src/app/services: Contains the service for making HTTP requests to the backend API.
+src/app/models: Contains the data models used in the application.
+
+Technologies Used
+
+Angular
+HttpClient for making API requests
+
+
